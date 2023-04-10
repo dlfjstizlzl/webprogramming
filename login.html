@@ -20,7 +20,31 @@
     숫자: <input type="number" size="20" value=""><br>
     범위: <input type="range" size="20" value=""><br>
 <input type="submit" value="제출"><br>
-
 </form>
+
+<h1>고객의 소리</h1>
+<form name="input" action="getfeedback.jsp" method="get">
+아이디:<input type="text", size="20"><br>
+구매번호:<input type="number", size="20"><br>
+패스워드:<input type="password", size="20"><br>
+제품을 평가해주세요. <br><textarea name="feedback" cols="50" rows="5"></textarea>
+<input type="reset", name="reset" value="reset">
+<input type="submit" name="submit",value="제출"></form>
+<br><br>    
+<h1>선호도 조사입니다.</h1>
+<form action="">
+    성별: <input type="radio",name="gender", value="남자">남자
+        <input type="radio", name="gender", value="여자">여자 <br>
+    설문1:
+    <input type="radio", name="s1">예 <br>
+    설문2:
+    <input type="radio", name="s2">예
+        <br>
+        과일 선택 : <input type="checkbox", name="fruit", value="사과">사과
+    <input type="checkbox", name="fruit", value="배">배
+    <input type="checkbox", name="fruit", value="딸기">딸기 <br>
+    <input type="button" value="눌러볼래?" onclick="alert('환영합니다.')">
+</form>
+<button type="button"><img height="100" width="100" src="https://mblogthumb-phinf.pstatic.net/MjAxNzAxMTBfMjQ5/MDAxNDg0MDEyMjU1OTEx.2SRaiftoRhm0dQrO_qt0si_CFQTlrVrO5mvUzbx-npwg.ebKDAj3hPqYeYM9aZfA9WXz8aKpvKBvxcYIKc4ajwvsg.JPEG.3dupndown/%EC%97%90%EB%94%94.jpg?type=w2" alt=""></button>
 </body>
 </html>
