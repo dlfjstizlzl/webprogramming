@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+@keyframes rotate_image{
+    100% {
+        transform: rotate(360deg);
+    }
+}
+        
+.rotation{
+    width: 250px;
+    height: 250px;
+    background-image: url(https://i.namu.wiki/i/1UyulCcDF0WEolDrlrXOvqIS-n5kzz-jrvid3hZbDW9wc7yuHZ9LAYlSIgrkydW5qwCj92gPnF20zP2e_bt2PQ.webp);
+    animation: rotate_image 0.0001s linear infinite;transform-origin: 50% 50%;}  
+.container{
+            width: 700px ;
+             height: 500px;
+             background-color: blue;
+             display: flex;
+             /* flex-direction: column-reverse; */
+             /* align-items: center; */
+             /* align-content: end; */
+             
+        }
+        .item{
+            background-color: yellow;
+            border: 1px solid black;
+        }
+        .item:nth-child(1){
+            /* width: 120px;
+            height: 120px; */
+            flex-basis: 10%;
+        }
+        
+        .item:nth-child(2){
+        /* width: 80px;
+        height: 120px; */
+        flex-basis: 20%;
+        }
+        
+        .item:nth-child(3){
+        /* width: 120px;
+        height: 80px; */
+        flex-basis: 30%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+<div class="rotation"></div>
+</body>
+</html>
