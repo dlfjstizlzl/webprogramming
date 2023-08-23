@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #test{
+            background-color: aqua;
+        }
+        #strtest{
+            background-color: #FF0000;
+        }
+    </style>
+</head>
+<body>
+    <h1>버튼을 누르면 문자가 출력됩니다. </h1>
+    <h1 id="test">합계 출력 영역</h1>
+    <h1 id="strtest">문자 출력 영역</h1>
+    <button onclick="sumprint()">더하기 결과 출력</button>
+    <button onclick="strprint()">입력 결과 출력</button>
+    <script>
+        let color_num = 0
+        function sumprint(){
+            let x = parseInt(prompt("첫번째 더할 수를 입력하세요"));
+            let y = parseInt(prompt("두번째 더할 수를 입력하세요"));
+          let z = x+y;
+            document.getElementById("test").innerHTML=z;
+        }
+        function strprint(){
+            
+            let input = prompt("입력할 값을 입력하세요");
+            document.getElementById("strtest").innerHTML = input;
+            document.getElementById("strtest").style += color_num;
+            color_num += 30;
+        }
+    </script>
+</body>
+</html>
