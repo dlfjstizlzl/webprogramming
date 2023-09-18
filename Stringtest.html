@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+//문자열 검색
+//         let s = "A bad workman always blames his tools.";
+//         let n = s.indexOf("bad");
+//         document.write(n + '<br>'); 
+    
+//문자열 매칭
+// let str = 'Like father, like son.';
+// // like를 찾는다. i와 g는 옵션으로 insensitive, globally를 의미한다. 
+// result = str.match(/like/ig);
+// document.write(result + '<br>'); 
+
+// //문자열 대체
+//         let p = 'The quick brown fox jumps over the lazy dog DOG doG Dog';
+//         document.write(p+"<br>");
+//         document.write(p.replace('dog','cat')+"<br>");
+//         let regex = /Dog/gi;
+//         document.write(p.replace(regex, 'cat'))+"<br>";
+    //문자열 분할
+    // let s = "One,Two,Three,Four,Five";
+    // let array[] = s.value;
+    //     for (i = 0; i < array.length; i++) {
+    //         document.write(i + '-' + array[i] + '<br>');
+    //     }
+    // function calc(type) {
+    //         let x = parseFloat(document.calculator.number1.value);
+    //         let y = parseFloat(document.calculator.number2.value);
+    //         switch(type){
+    //             case 1: result = x+y; break;
+    //             case 2: result = x-y;break;
+    //             case 3: result = x*y;break;
+    //             case 4: result = x/y;break;
+    //         }
+    //         document.calculator.total.value = result;
+    //     }
+    function calc(type) {
+            let x = parseFloat(document.calculator.number1.value);
+            if (type == 1)
+                y = //
+            else if (type == 2)
+                y = //
+            else if (type == 3)
+                y = //
+            else if (type == 4)
+                y = x>0 ? x : x*-1;
+            document.calculator.total.value = y;
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <form name="calculator">
+        입력:               <input type="text" name="number1"><br />
+        계산 결과:          <input type="text" name="total"><br />
+
+        <input type="button" value="SIN" onclick="calc(1);">
+        <input type="button" value="LOG" onclick="calc(2);">
+        <input type="button" value="SQRT" onclick="calc(3);">
+        <input type="button" value="ABS" onclick="calc(4);">
+    
+    <!-- <form name="calculator">
+        입력:               <input type="text" name="number1"><br />
+        입력2 :             <input type="tex" name="number2"><br/>
+        계산 결과:          <input type="text" name="total"><br />
+
+        <input type="button" value="SUM" onclick="calc(1);">
+        <input type="button" value="SUB" onclick="calc(2);">
+        <input type="button" value="MUL" onclick="calc(3);">
+        <input type="button" value="DIV" onclick="calc(4);">
+    </form> -->
+
+    <!-- <p id="test">다음에 학습할 내용은 HTML입니다. </p>
+    <button onclick="strch()">HTML 학습을 끝냈으면 누르세요. </button>
+    <script>
+       function strch(){
+    let text = document.getElementById("test").innerHTML;
+    document.getElementById("test").innerHTML = text.replace("HTML","JS");
+}
+    </script> -->
+</body>
+</html>
