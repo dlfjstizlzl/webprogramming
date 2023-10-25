@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <title>주사위 굴리기</title>
+    <style>
+        body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+            
+        }
+        #parent-dice{
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .p1 .p2{
+            display: block;
+            margin: 10px;
+        }
+
+        * {
+            font-family: 굴림, sans-serif;
+            text-align: center;
+        }
+
+        #dice, #dice2{
+            height: 100px;
+            width: 100px;
+            margin: 10px auto;
+            background-color: yellow;
+            border: 1px solid gray;
+            border-radius: 10px;
+            font-size: 100px;
+        }
+    </style>
+    <script>
+        function roll() {
+            let num = Math.floor(Math.random() * (7- 1) + 1);
+            document.getElementById("dice").innerHTML = num;
+            if(document.getElementById("dice2").innerHTML != 0){
+                if(document.getElementById("dice2").innerHTML < num){
+                    alert("플레이어1 승리");
+                }
+            }
+        }
+        function roll2() {
+            let num = Math.floor(Math.random() * (7- 1) + 1);
+            document.getElementById("dice2").innerHTML = num;
+            if(document.getElementById("dice").innerHTML != 0){
+                if(document.getElementById("dice").innerHTML < num){
+                    alert("플레이어2 승리");
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h3>주사위 굴리기 게임입니다.</h3>
+<div id="parent-dice">
+    <div id="p1">
+        <p>1번째 플레이어</p>
+        <p id="dice"> </p>
+        <button onclick="roll()">주사위 굴리기</button>
+    </div>
+    
+    <div id="p2">
+        <p>2번째 플레이어</p>
+    <p id="dice2"> </p>
+    <button onclick="roll2()">주사위 굴리기</button>
+    </div>
+</div>
+</body>
+
+</html>

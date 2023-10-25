@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+function addrow(){
+    let number = document.getElementById("input_text").value;
+    let tt = document.getElementById("table_eee");
+    for(let i = 0; i<number; i++){
+    let row = tt.insertRow(i);
+    row.insertCell(0).innerHTML = "새로운 셀 (1,1)";
+    row.insertCell(1).innerHTML = "새로운 셀 (1,2)";
+    }
+}
+function delterow(){
+    let tt = document.getElementById("table_eee");
+    let number = document.getElementById("input_text").value;
+
+    for(let i = 0; i<number; i++){
+        let row = tt.deleteRow(0);
+    }
+}
+</script>
+</head>
+<body>
+    <table border="1px" id="table_eee">
+        <tr>
+        <th>(1,1) 셀</th>
+        <th>(2,1) 셀</th></tr>
+        <tr><th>(1,2) 셀</th><th>(2,2) 셀</th></tr>
+    </table>
+    <input type="number" id="input_text">
+    <button onclick="addrow()">행 추가</button>
+    <button onclick="delterow()">행 삭제</button>
+    
+</body>
+</html>
