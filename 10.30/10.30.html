@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ee{
+            background-color: yellow;
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+    <script>
+        function eee(obj){
+            obj.innerHTML = "감사합니다"
+        }
+        function ee(obj){
+            obj.innerHTML = "마우스를 올려보세요"
+
+        }
+    </script>
+</head>
+<body>
+    <p id="ee" onmouseover="eee(this)" onmouseout="ee(this)">마우스를 올려주세요!</p>
+</body>
+</html>
