@@ -1,0 +1,46 @@
+<html>
+<head>
+    <script>
+    function random_number(){
+        let random_for = Math.floor(Math.random() * (5 - 3) + 3);
+        let random_value = Math.floor(Math.random() * (10 - 1) + 1);
+        let random_for2;
+        for(let i = 0; i<random_for; i++){
+            random_for2 = Math.floor(Math.random() * (5 - 1) + 1);
+            let how;
+            switch(random_for2){
+                case 1: how = "+"; break;
+                case 2: how = "-"; break;
+                case 3: how = "/"; break;
+                case 4: how = "*"; break;
+            }
+            let random_num = Math.floor(Math.random() * (100 - 1) + 1);
+            random_value += how + random_num;
+        }
+        console.log(random_value);
+        document.getElementById("problem").value = random_value;
+    }
+    
+    
+    function cal() {
+        let answer = document.getElementById("answer").value;
+        let s = document.getElementById("problem").value;
+        let solution = eval(s);
+        if(answer == solution){
+            alert("정답!");
+        }else{
+            alert("틀렸습니다! 정답은 " + solution);
+        }
+    }
+
+    window.onload = random_number; // 페이지가 로드될 때 random_number 함수 호출
+
+    </script>
+</head>
+<body>
+    <h1>Math Quiz</h1>
+    <input type="text" id="problem"><br>
+    <input type="text" id="answer">
+    <button onclick="cal()">정답 알아보기</button>
+</body>
+</html>
