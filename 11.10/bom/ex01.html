@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+  
+  <p id="demo"></p>
+
+  <button onclick="myStop()">시계 멈추기</button>
+
+  <script>
+    const myInterval = setInterval(myTimer)
+    var date
+    function myTimer() {
+      date = new Date();
+      document.getElementById("demo").innerHTML = date.toLocaleTimeString();
+    }
+
+    function myStop() {
+      clearInterval(myInterval);
+      document.write(date)
+    }
+  </script>
+
+</script>
+</body>
+</html> 
