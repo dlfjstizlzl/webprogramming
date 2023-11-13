@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="myCanvas" width="300" height="200"
+style="border: 1px dotted red"></canvas>
+<script>
+let canvas = document.getElementById("myCanvas");
+let context = canvas.getContext("2d");
+context.beginPath();
+context.moveTo(80, 80);
+context.lineTo(50, 120);
+context.lineTo(150, 120);
+context.fill();
+</script>
+<canvas id="myCanvas2" width="300" height="200"
+style="border: 1px dotted red"></canvas>
+<script>
+let canvas2 = document.getElementById("myCanvas2");
+let context2 = canvas2.getContext("2d");
+context2.beginPath();
+context2.moveTo(100, 80);
+context2.lineTo(50, 160);
+context2.lineTo(150, 160);
+context2.fill();
+</script>
+</body>
+</html>
